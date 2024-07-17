@@ -6,7 +6,7 @@ attribute mat4 aPrecomputeLT;
 uniform mat4 uModelMatrix;
 uniform mat4 uViewMatrix;
 uniform mat4 uProjectionMatrix;
-uniform mat3 uPrecomputeL[3];
+uniform mat3 uPreComputeL[3];
 
 varying highp vec3 vNormal;
 varying highp vec2 vTextureCoord;
@@ -29,8 +29,8 @@ void main() {
   vNormal = (uModelMatrix * vec4(aNormalPosition, 0.0)).xyz;
 
   for (int i=0; i<3; i++) {
-    //vColor[i] = L_dot_LT(uPrecomputeL[i], aPrecomputeLT);
-    vColor[i] = uPrecomputeL[i][0][0];
+    // vColor[i] = L_dot_LT(uPrecomputeL[i], aPrecomputeLT);
+    vColor[i] = uPreComputeL[i][0][0];
   }
 
   gl_Position = uProjectionMatrix * uViewMatrix * uModelMatrix *

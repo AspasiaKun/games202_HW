@@ -3,7 +3,6 @@ function getRotationPrecomputeL(precompute_L, rotationMatrix){
 	let rotateSHMat1 = computeSquareMatrix_3by3(rotMat)
 	let rotateSHMat2 = computeSquareMatrix_5by5(rotMat)
 	let ret = []
-	
 	for(i = 0; i < 3; i++)
 	{
 		let colors = math.clone(precompute_L[i])
@@ -21,15 +20,15 @@ function getRotationPrecomputeL(precompute_L, rotationMatrix){
 		let rotatedSH1 = math.multiply(rotateSHMat1, [sh1n1, sh10, sh1p1])
 		let rotatedSH2 = math.multiply(rotateSHMat2, [sh2n2, sh2n1, sh20, sh2p1, sh2p2])
 
-		colors[1] = rotatedSH1[0]
-		colors[2] = rotatedSH1[1]
-		colors[3] = rotatedSH1[2]
+		colors[1] = rotatedSH1._data[0]
+		colors[2] = rotatedSH1._data[1]
+		colors[3] = rotatedSH1._data[2]
 
-		colors[4] = rotatedSH2[0]
-		colors[5] = rotatedSH2[1]
-		colors[6] = rotatedSH2[2]
-		colors[7] = rotatedSH2[3]
-		colors[8] = rotatedSH2[4]
+		colors[4] = rotatedSH2._data[0]
+		colors[5] = rotatedSH2._data[1]
+		colors[6] = rotatedSH2._data[2]
+		colors[7] = rotatedSH2._data[3]
+		colors[8] = rotatedSH2._data[4]
 
 		ret.push([colors[0], colors[1], colors[2], 
 				  colors[3], colors[4], colors[5],

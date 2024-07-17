@@ -46,7 +46,6 @@ class WebGLRenderer {
             for (let i = 0; i < this.meshes.length; i++) {
                 this.gl.useProgram(this.meshes[i].shader.program.glShaderProgram);
                 this.gl.uniform3fv(this.meshes[i].shader.program.uniforms.uLightPos, this.lights[l].entity.lightPos);
-
                 for (let k in this.meshes[i].material.uniforms) {
 
                     let cameraModelMatrix = mat4.create();
@@ -64,8 +63,8 @@ class WebGLRenderer {
                     let precomputeL_RGBMat3 = getRotationPrecomputeL(Mat3Value, cameraModelMatrix);
                     
                     // console.log("precomputeL: ", precomputeL_RGBMat3[0]);
-                    for (let j=0; j<3; j++) {
-                        if (k == 'uPrecomputeL['+j+']') {
+                    for (let j = 0; j < 3; j++) {
+                        if (k === `uPreComputeL[${j}]`) {
                             gl.uniformMatrix3fv(
                                 this.meshes[i].shader.program.uniforms[k],
                                 false,

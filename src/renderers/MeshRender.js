@@ -126,7 +126,6 @@ class MeshRender {
 		// mat4.lookAt(viewMatrix, cameraPosition, [0,0,0], [0,1,0]);
 		// Projection transform
 		mat4.copy(projectionMatrix, camera.projectionMatrix.elements);
-
 		gl.uniformMatrix4fv(
 			this.shader.program.uniforms.uProjectionMatrix,
 			false,
