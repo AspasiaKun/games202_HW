@@ -1,0 +1,6 @@
+/Users/bytedance/Desktop/WorkSpace/games202 hw/homework4/lut-gen/build/CMakeFiles/lut-Emu-MC.dir
+/Users/bytedance/Desktop/WorkSpace/games202 hw/homework4/lut-gen/build/CMakeFiles/lut-Eavg-MC.dir
+/Users/bytedance/Desktop/WorkSpace/games202 hw/homework4/lut-gen/build/CMakeFiles/lut-Emu-IS.dir
+/Users/bytedance/Desktop/WorkSpace/games202 hw/homework4/lut-gen/build/CMakeFiles/lut-Eavg-IS.dir
+/Users/bytedance/Desktop/WorkSpace/games202 hw/homework4/lut-gen/build/CMakeFiles/edit_cache.dir
+/Users/bytedance/Desktop/WorkSpace/games202 hw/homework4/lut-gen/build/CMakeFiles/rebuild_cache.dir
